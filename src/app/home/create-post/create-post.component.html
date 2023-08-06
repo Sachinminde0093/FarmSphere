@@ -1,0 +1,122 @@
+<!-- <div class="create-post">
+    <div class="main-div">
+        <div class="create-post-name">
+            <h3> Create Post </h3>
+        </div>
+        <hr>
+        <div>
+            <div>
+                Sachin Minde
+            </div>
+            <div>
+                Friends
+            </div>
+        </div>
+
+        <div class="typeButtons">
+            <button> Text </button>
+            <button> Image </button>
+            <button> Video </button>
+        </div>
+        <div>
+            <p>Title</p>
+            <input type="text">
+            <p>Body</p>
+            <input type="text">
+        </div>
+
+        <div class="fiels-div">
+
+            <div>
+
+                <form method="post" enctype="multipart/form-data">
+                    <div>
+                        <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple
+                            style="display: none;" />
+                        <label for="image_uploads" style="cursor: pointer;">
+                            Click here to select images to upload (PNG, JPG)
+                        </label>
+                    </div>
+                    <div class="preview">
+                        <p>No files currently selected for upload</p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <div>
+            <button>
+                Post
+            </button>
+        </div>
+    </div>
+
+</div> -->
+<div class="create-post">
+    <div class="main-div">
+        <div class="create-post-name">
+            <h3> Create Post </h3>
+        </div>
+        <hr>
+        <div>
+            <div>
+                Sachin Minde
+            </div>
+            <div>
+                Friends
+            </div>
+        </div>
+
+        <div class="typeButtons">
+            <button> Text </button>
+            <button> Image </button>
+            <button> Video </button>
+        </div>
+        <div>
+            <p>Title</p>
+            <input type="text">
+            <p>Body</p>
+            <input type="text">
+        </div>
+
+        <div *ngIf="isImageSelected">
+            <div *ngFor="let room of imageList">
+                <img [src]="room" class="img-fluid rounded-start" alt="..." height="100px" width="100px">
+            </div>
+        </div>
+
+
+        <div class="fiels-div">
+
+            <div>
+                <form method="post" enctype="multipart/form-data">
+                    <div>
+                        <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple
+                            (change)="onFileUpload($event)" style="display: none;" />
+
+                        <label for="image_uploads" style="cursor: pointer;">
+                            <div class="photos-add">
+
+                                <div class="image">
+                                    <p class="img-icon-drop"><ion-icon name="cloud-upload-outline"></ion-icon></p>
+                                    <p class="img-txt">Add photos/videos </p>
+                                    <p class="drag">or drag and drop</p>
+                                    <button class="close"><ion-icon name="close-circle-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <div>
+            <button>
+                Post
+            </button>
+        </div>
+    </div>
+
+</div>
