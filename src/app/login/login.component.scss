@@ -1,0 +1,58 @@
+.outer-div {
+    display: flex;
+    justify-content: center;
+}
+
+.main-div {
+    align-items: center;
+    display: inline-block;
+    justify-content: center;
+    padding: 5px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+
+.title {
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: darkmagenta;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+
+
+input {
+    margin: 20px;
+}
+
+.input-email {
+    padding: 10px;
+    width: 300px;
+    border-radius: 3px;
+    border: 0px;
+}
+
+.input-password {
+    padding: 10px;
+    width: 300px;
+    border-radius: 3px;
+    border: 0px;
+}
+
+.login-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.login {
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    border-radius: 8px;
+}

@@ -1,11 +1,19 @@
-<p>login works!</p>
+<body class="login">
+    
+    <div class="outer-div">
+        <div class="main-div">
 
-<input [(ngModel)]="name" required>
-<input [(ngModel)]="email" required>
+            <div class="title">login works!</div>
+            <!-- <div class="input-name"><input [(ngModel)]="name" required></div> -->
+            <div>
+                <input [(ngModel)]="email" required placeholder="Email" class="input-email">
+            </div>
 
-<input type="password" [(ngModel)]="password" required>
+            <div><input type="password" [(ngModel)]="password" required placeholder="Password" class="input-password">
+            </div>
 
-<button (click)="login()"> Login </button>
 
-
-<a routerLink="home">home</a>
+            <div class="login-div"><button (click)="login()" class="login"> Login </button></div>
+        </div>
+    </div>
+</body>

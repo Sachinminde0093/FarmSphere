@@ -8,7 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MarketComponent } from './market/market.component';
 import { CreatePostComponent } from './create-post/create-post.component';
-import { NgModel } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,8 +22,11 @@ import { NgModel } from '@angular/forms';
     CreatePostComponent
   ],
   imports: [
+    HttpClientModule,
     CommonModule,
     HomeRoutingModule,
+    FormsModule
+
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA,

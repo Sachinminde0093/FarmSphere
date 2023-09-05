@@ -1,22 +1,65 @@
-body {
-  margin: -10px;
-  padding: -10px;
-}
+// body {
+//   margin: -10px;
+//   padding: -10px;
+// }
+
+// .nav{
+//   background-color: #333;
+//   display: flex;
+// }
+
+// ul {
+//   list-style-type: none;
+//   margin: 0px;
+//   padding: 0px;
+//   overflow: hidden;
+// }
+
+// li {
+//   float: left;
+//   font-size: 20px;
+// }
+
+// li a {
+//   display: block;
+//   color: white;
+//   text-align: center;
+//   padding: 14px 16px;
+//   text-decoration: none;
+// }
+
+// li a:hover:not(.active) {
+//   background-color: #111;
+// }
+
+// .active {
+//   background-color: #04AA6D;
+// }
+
+
 
 .nav{
   background-color: #333;
-  display: flex;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500;
 }
 
 ul {
   list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+  // position: fixed;
+  // top: 0;
+  width: 100%;
 }
 
 li {
   float: left;
+  font-size: 20px;
 }
 
 li a {
@@ -31,10 +74,14 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
-.active {
-  background-color: #04AA6D;
+.profile-right {
+  float:right
+}
+.post-div{
+  padding:20px;
+  margin-top:42px
 }
 
-.profile-right {
-  align-self: flex-end;
-}
+// .active {
+//   background-color: #04AA6D;
+// }

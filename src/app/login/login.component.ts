@@ -24,10 +24,12 @@ export class LoginComponent {
   login() {
 
    try {
-    if (this.password.length > 8) {
+    if (this.password.length > 5) {
       this.loginService.login(this.email, this.password, this.name).subscribe(
         (user) => {
-          this.localstorage.setItem('user',JSON.stringify(user));
+        console.log(user.accessToken, 'login data');
+        console.log('from interceptor');
+          this.localstorage.setItem('accessToken',JSON.stringify(user.accessToken));
           this.router.navigate(['/home']);
         }
       );

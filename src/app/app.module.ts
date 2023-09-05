@@ -5,8 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms'; // Import FormsModule here
+import { CreatePostService } from './home/create-post/create-post.service';
+
+
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'http://localhost:8080', options: {auth:{},} };
 
 
 @NgModule({
@@ -19,10 +25,11 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule here
     AppRoutingModule,
     HttpClientModule,
     HomeModule,
-    FormsModule
+    FormsModule,
+    SocketIoModule.forRoot(config)
   ],
   providers: [
-
+    CreatePostService
   ],
   bootstrap: [AppComponent,HomeModule],
   schemas:[

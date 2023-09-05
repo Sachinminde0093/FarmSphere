@@ -15,9 +15,10 @@ export class LoginService {
       email,
      password,
     }
-    let user = this.http.post<User>('/api/user/login', data);
+    // let user =  this.http.post<User>('/api/user/login', data);
+    // this.http.get<User>('/api/user');
 
-    return this.http.post<User>('/api/user/login', data);
+     return  this.http.post<User>('/api/user/login', data);
 
   }
 
@@ -34,6 +35,7 @@ export class LoginService {
         email: 'sachin@gmail.com',
         name: "string",
         userId: '21u153',
+        accessToken:''
       }
       return user;
     } catch (error) {

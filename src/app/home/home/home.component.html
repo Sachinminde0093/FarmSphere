@@ -1,16 +1,15 @@
-<div class="nav">
-    <div>
+
+
+<!-- <div style="height: 30px; background-color: aqua; width: 1005;"></div> -->
+
+    <div class="nav">
         <ul>
-            <li> <a routerLink="post"> Home </a> </li>
-            <li> <a routerLink="news"> News </a> </li>
-            <li> <a routerLink="market"> Market </a> </li>
+            <li><a routerLink="post"> Home </a></li>
+            <li><a routerLink="news"> News </a></li>
+            <li><a routerLink="market"> Market </a></li>
+            <li class="profile-right"><a routerLink="profile">Profile</a></li>
         </ul>
     </div>
-    
-    <div class="profile-right">
-        <ul>
-            <li> <a routerLink="profile"> Profile </a> </li>
-        </ul>
+    <div class="post-div">
+        <router-outlet></router-outlet>
     </div>
-</div>
-<router-outlet></router-outlet>

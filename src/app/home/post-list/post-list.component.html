@@ -1,21 +1,138 @@
+<div class="outer-div">
+    <div *ngFor="let post of post_list" class="list-div">
+        
+        <div class="main-div">
+            <div class="user-div">
+                <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
+                <div>
+                    <h2>
+                        My Farmer
+                    </h2>
+                    <div class="user-subtitle">
+                        <h6>
+                            Farmer.
+                        </h6>
+                        <h6>1.d.</h6>
+                        <img src="../../../assets/images/avatar.jpg" alt="" class="subtitle-img">
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <p class="three-dots"><ion-icon name="ellipsis-horizontal"></ion-icon></p>
+                </div>
+            </div>
 
-<div *ngFor="let post of post_list; let i = index">
+            <div class="title-div">
+                <h2 class="title">
+                    <!-- BMW G80/G82/G83 M3 and M4 Discussion/Marketplace -->
+                    {{ post.title }}
+                </h2>
+            </div>
 
-    <div class="post">
-        <h1>
-            asldjkasljjdmiasjoljoiajslkdlskvjdlkmslkj
-        </h1>
+            <div class="body-div">
+                <p>
+
+                    {{ post.body }}
+
+                </p>
+            </div>
+
+            <ng-container *ngIf="post.images.length > 0">
+                <div class="for-loop-div">
+                    <div *ngFor="let image of post.images" class="post-img-div">
+                        <img [src]="image" alt="" class="post-img">
+                </div>
+                </div>
+               
+                
+            </ng-container>
+            
+
+            <div class="count-div">
+
+            </div>
+
+            <div class="actions">
+
+                <p class="like">
+                    <img src="../../../assets/png/like.png" alt="" class="like-img">Like
+                </p>
+                <p class="comment"><ion-icon name="chatbox-outline"></ion-icon>Comment</p>
+                <p class="share"><ion-icon name="arrow-redo-outline"></ion-icon>Share</p>
+
+            </div>
+
+            <div class="comment-sec">
+                <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
+
+                <input type="text" class="comment-input" name="username" placeholder="Write a public comment">
+                <div class="icons">
+                    <p class="send"> <ion-icon name="send-outline"></ion-icon> </p>
+                    <!-- <p class="avatar"></p> -->
+                    <p class="smily"><ion-icon name="happy-outline"></ion-icon></p>
+                    <p class="camera"><ion-icon name="camera-outline"></ion-icon></p>
+                    <!-- <p class="gif"><i class="fa-thin fa-gif"></i></p> -->
+                    <!-- <p class="sticker"></p> -->
+                </div>
+            </div>
+
+        </div>
 
     </div>
-    <!-- <ng-container *ngIf="i === 2">
-        {{ getPost() }}
-        <h1>.......................{{ i }}</h1>
-    </ng-container> -->
-
 </div>
 
-<!-- 
-    <div *ngFor="let post of post_list" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div *ngFor="let post of post_list; let i = index">
+
+    <div class="post">
+        <div class="user">
+
+            <div>
+                {{ post.user.name }}
+            </div>
+            
+            <div>
+                {{ post.user.email }}
+            </div>
+        </div>
+        <div class="main-div">
+            <div class="title">
+                <h2> {{ post.post.title }} </h2>
+            </div>
+            <div class="body">
+                {{ post.post.body}}
+            </div>
+        </div>
+
+    </div>
+    <ng-container *ngIf="i === 2">
+        {{ getPost() }}
+        <h1>.......................{{ i }}</h1>
+    </ng-container> 
+
+</div> -->
+
+
+<!-- <div *ngFor="let post of post_list" >
         <div class="post">
 
    
@@ -70,4 +187,4 @@
 
         </div>
 
-    </div> -->
+    </div>  -->
