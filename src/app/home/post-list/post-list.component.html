@@ -1,7 +1,6 @@
 <div class="outer-div">
-    <div *ngFor="let post of post_list" class="list-div">
-        
-        <div class="main-div">
+    <div *ngFor="let post of post_list let i = index" class="list-div">
+        <div class="main-div" >
             <div class="user-div">
                 <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
                 <div>

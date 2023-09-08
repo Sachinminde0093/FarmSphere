@@ -9,91 +9,87 @@ export class CreatePostService {
 
   constructor(private http: HttpClient) { }
 
-   uploadPhoto(files:FileList, title:string, body?:string): Observable<any> {
-    
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcxMGU3ZjZjLTFkZWItNDI2ZS1iN2ZmLWFmYTlkYzMyZGI0OCIsImlhdCI6MTY5Mzc1MDgyMSwiZXhwIjoxNjk0MTgyODIxfQ.Sd1xknPsQPq0qHzWeoFMIc0-698W5S6ND_4DcI9_3oA";
+  uploadPhoto(files: FileList): Observable<any> {
+
+
 
     let fileUploadData: FileUploadData[] = [];
-      
-    
-     for(let i = 0; i< files.length; i++){
+
+
+    for (let i = 0; i < files.length; i++) {
       const file = files[i];
       console.log(file.type);
 
       fileUploadData.push({
-        path:"path",
-        order:i,
-        extension:'png',
-        type:"image"
+        path: "path",
+        order: i,
+        extension: 'png',
+        type: "image"
       })
-     } 
+    }
 
-    let fileUploadResponse:FileUploadResponse[] = [];
+    let fileUploadResponse: FileUploadResponse[] = [];
 
-   return this.http.post<FileUploadResponse[]>('/api/file', fileUploadData, {
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-    });
+    return this.http.post<FileUploadResponse[]>('/api/file/generate-url', fileUploadData);
 
     // // const url = data[0].url;
     // console.log(url);
-  
+
   }
 
-  uploadFile(data : any, files:File){
-      console.log(data);
+  uploadFile(data: FileUploadResponse, files: File) {
+    console.log(data);
 
-      // for (let file of data) {
-      //   // console.log(file.url);
-      //   // fData: FormData = new FormData();
-      //   const formData = new FormData();
-      //   console.log('form Data', formData);
-        
-      //   formData.append('file', files[file.order]);
+    // for (let file of data) {
+    //   // console.log(file.url);
+    //   // fData: FormData = new FormData();
+    //   const formData = new FormData();
+    //   console.log('form Data', formData);
 
-      //   console.log(formData, 'form Data');
+    //   formData.append('file', files[file.order]);
 
-      //   const headers = new HttpHeaders({
-      //     'Accept': '/',
-      //     'Content-Type': `image/${file.extension}`,
-      //   })
+    //   console.log(formData, 'form Data');
 
-      const file = data[0];
-      console.log(data, 'data');
-      console.log(files, 'files');
+    //   const headers = new HttpHeaders({
+    //     'Accept': '/',
+    //     'Content-Type': `image/${file.extension}`,
+    //   })
+
+    // const file = data[0];
+    console.log(data, 'data');
+    console.log(files, 'files');
 
 
-        const headers = new HttpHeaders({
-          'Accept': '/',
-          'Content-Type': files.type,
-        })
+    const headers = new HttpHeaders({
+      'Accept': '/',
+      'Content-Type': files.type,
+    })
 
-        const formData = new FormData();
-        console.log('form Data', formData);
-        formData.append('file', files);
+    const formData = new FormData();
+    console.log('form Data', formData);
+    formData.append('file', files);
 
-        
-        
-          return this.http.request('PUT', file.url, {
-            body:files,
-            headers:headers
-          }).pipe(
-            catchError((error: HttpErrorResponse) => {
-              return throwError(error);
-            })
-          );
 
-          // catchError((error: HttpErrorResponse) => {
-          //   this.handleErrorResponse(error);
-          //   return throwError(error);
-          // })
-        
 
-        // this.http.put(file.url, formData,{headers}).subscribe((data) => {
-        //   console.log(data, 'data');
-        // });
-      
+    // return this.http.request('PUT', file.url, {
+    //   body: files,
+    //   headers: headers
+    // }).pipe(
+    //   catchError((error: HttpErrorResponse) => {
+    //     return throwError(error);
+    //   })
+    // );
+
+    // catchError((error: HttpErrorResponse) => {
+    //   this.handleErrorResponse(error);
+    //   return throwError(error);
+    // })
+
+
+    // this.http.put(file.url, formData,{headers}).subscribe((data) => {
+    //   console.log(data, 'data');
+    // });
+
   }
 
   // upload(file: File, uploadInfo: any): Observable<any> {
@@ -114,23 +110,23 @@ export class CreatePostService {
   //   return this.baseService.fetchForFile(requestObject);
 
   // }
-  
+
 }
 
 
 
 interface FileUploadData {
-  path:string;
-  order:number;
-  extension:string;
-  type:string;
+  path: string;
+  order: number;
+  extension: string;
+  type: string;
 }
 
-interface FileUploadResponse{
-  type:string;
-  order:number;
-  extension:string;
-  key:string;
-  url:string;
+interface FileUploadResponse {
+  type: string;
+  order: number;
+  extension: string;
+  key: string;
+  url: string;
 }
-      
+

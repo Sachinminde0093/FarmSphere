@@ -1,8 +1,13 @@
 export interface User {
    
-    userId:string,
+    user_id:string,
     email:string,
     name:string,
     proImage?:string,
-    accessToken:string   
+   
+}
+
+export interface LoginResponse{
+    user:User,
+     accessToken:string   
 }

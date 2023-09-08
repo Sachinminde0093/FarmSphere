@@ -1,11 +1,149 @@
+<div class="outer">
+  <div class="left" >
+    <div *ngFor="let i of userList">
+      <div [ngStyle]="{'background-color': i.user_id == selectedUser?.user_id ? 'grey' : null}">
+        <div class="user-div" (click)="selectUser(i)">
+          <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
+          <div class="username-div">
+            <h2 class="username"> {{ i.email }} </h2>
+            <p class="lastmes2sage"> how are you</p>
+          </div>
+        </div>
+        <hr class="devider">
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="main">
+      <div class="upper">
+        <div class="email">
+          {{ selectedUser?.email }}
+        </div>
+      </div>
 
-   
+      <div class="middle">
+
+        <div>
+          <div class="chat">
+            <div *ngFor="let message of messageList let i = index">
+              <div *ngIf="selectedUser?.user_id == message.senderuser_id ">
+                <div class="message-box" style="float: left;">
+                  <p>{{ message.content }}</p>
+                  {{ message.created_at }}
+                </div>
+              </div>
+
+              <div *ngIf="selectedUser?.user_id == message.receiveruser_id">
+                <div class="message-box" style="float: right;">
+                  <p>{{ message.content }}</p>
+                  {{ message.created_at }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="lower">
+          <div class="chat-box">
+            <input id="input" autocomplete="off" [(ngModel)]="value" />
+            <button  class="send-button" (click)="send()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div>
+  <div class="main-container">
+    <div class="uesr-container">
+      <div *ngFor="let i of userList">
+
+        <div [ngStyle]="{'background-color': i.user_id == selectedUser?.user_id ? 'grey' : null}" style="width: 100%;">
+          <div class="user-div" (click)="selectUser(i)">
+            <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
+            <div class="username-div">
+              <h2 class="username"> {{ i.email }} </h2>
+              <p class="lastmessage"> how are you</p>
+            </div>
+          </div>
+          <hr class="devider">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="chat-container" *ngIf="selectedUser != null">
+     
+      <div class="email">
+        {{ selectedUser.email }}
+      </div>
+
+      <div class="chat">
+        <div *ngFor="let message of messageList let i = index">
+
+          
+          <div *ngIf="selectedUser?.user_id == message.senderuser_id ">
+            <div class="message-box" style="float: left;">
+              {{ message.content }}
+              {{ message.created_at }}
+            </div>
+          </div>
+
+          <div *ngIf="selectedUser?.user_id == message.receiveruser_id">
+            <div class="message-box" style="float: right;">
+              {{ message.content }}
+              {{ message.created_at }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-box">
+
+        <input id="input" autocomplete="off" [(ngModel)]="value" />
+        <button (click)="send()">Send</button>
+      </div>
+     
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    
 <body>
-
+  <div *ngFor="let chat of list" >
+    <div>
+     {{ chat }}
+    </div>
+  </div>
     <ul id="messages"></ul>
     <form id="form" action="">
-      <input id="input" autocomplete="off" /><button (click)="send()">Send</button>
+      <input id="input" autocomplete="off" [(ngModel)]="value" /> <button (click)="send()">Send</button>
     </form>
      
 </body>
-  
+   -->

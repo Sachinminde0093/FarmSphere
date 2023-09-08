@@ -5,15 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms'; // Import FormsModule here
 import { CreatePostService } from './home/create-post/create-post.service';
-
+import { LocalStorageToken } from './tokens/localstorage.token';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { RequestInterceptor } from './request.interceptor';
 
-const config: SocketIoConfig = { url: 'http://localhost:8080', options: {auth:{},} };
 
+const token = localStorage.getItem('accessToken');
+
+const config: SocketIoConfig = { url: 'http://localhost:8080', options: { auth: { token: token }, } };
 
 @NgModule({
   declarations: [
@@ -29,10 +32,16 @@ const config: SocketIoConfig = { url: 'http://localhost:8080', options: {auth:{}
     SocketIoModule.forRoot(config)
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptor,
+      multi: true
+    },
     CreatePostService
+   
   ],
-  bootstrap: [AppComponent,HomeModule],
-  schemas:[
+  bootstrap: [AppComponent, HomeModule],
+  schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ]

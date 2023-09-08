@@ -1,15 +1,158 @@
+<body>
+    <div class="main">
+        <div class="upper">
+                <ul>
+                    <li><a routerLink="post"> Home </a></li>
+                    <li><a routerLink="news"> News </a></li>
+                    <li><a routerLink="market"> Market </a></li>
+                    <li class="profile-right"><a routerLink="profile">Profile</a></li>
+                </ul>
+        </div>
+        <div class="lower">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- <div style="height: 30px; background-color: aqua; width: 1005;"></div> -->
+<!-- <div>
+        <div class="nav">
+            <ul>
+                <li><a routerLink="post"> Home </a></li>
+                <li><a routerLink="news"> News </a></li>
+                <li><a routerLink="market"> Market </a></li>
+                <li class="profile-right"><a routerLink="profile">Profile</a></li>
+            </ul>
+        </div>
+    </div>
 
-    <div class="nav">
-        <ul>
-            <li><a routerLink="post"> Home </a></li>
-            <li><a routerLink="news"> News </a></li>
-            <li><a routerLink="market"> Market </a></li>
-            <li class="profile-right"><a routerLink="profile">Profile</a></li>
-        </ul>
+
+<div class="main-container">
+
+    <div class="user"> -->
+<!-- <div *ngFor="let i of userList">
+  
+        <div [ngStyle]="{'background-color': i.user_id == selectedUser?.user_id ? 'grey' : null}" style="width: 100%;">
+          <div class="user-div" (click)="selectUser(i)">
+            <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
+            <div class="username-div">
+              <h2 class="username"> {{ i.email }} </h2>
+              <p class="lastmessage"> how are you</p>
+            </div>
+          </div>
+          <hr class="devider">
+        </div>
+      </div>
+    </div> -->
+
+<!-- <div class="chat"> -->
+<!-- <div class="chat-container" *ngIf="selectedUser != null">
+       
+        <div class="email">
+          {{ selectedUser.email }}
+        </div>
+  
+        <div class="chat">
+          <div *ngFor="let message of messageList let i = index">
+  
+            
+            <div *ngIf="selectedUser?.user_id == message.senderuser_id ">
+              <div class="message-box" style="float: left;">
+                {{ message.content }}
+                {{ message.created_at }}
+              </div>
+            </div>
+  
+            <div *ngIf="selectedUser?.user_id == message.receiveruser_id">
+              <div class="message-box" style="float: right;">
+                {{ message.content }}
+                {{ message.created_at }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+<!-- <div class="chat-box">
+  
+        <input id="input" autocomplete="off" [(ngModel)]="value" />
+        <button (click)="send()">Send</button>
+      </div> -->
+<!-- </div>
+    </div> -->
+
+
+
+
+
+
+
+
+<!-- <div>
+    <div class="main-container">
+      <div class="uesr-container">
+        <div *ngFor="let i of userList">
+  
+          <div [ngStyle]="{'background-color': i.user_id == selectedUser?.user_id ? 'grey' : null}" style="width: 100%;">
+            <div class="user-div" (click)="selectUser(i)">
+              <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
+              <div class="username-div">
+                <h2 class="username"> {{ i.email }} </h2>
+                <p class="lastmessage"> how are you</p>
+              </div>
+            </div>
+            <hr class="devider">
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="chat-container" *ngIf="selectedUser != null">
+       
+        <div class="email">
+          {{ selectedUser.email }}
+        </div>
+  
+        <div class="chat">
+          <div *ngFor="let message of messageList let i = index">
+  
+            
+            <div *ngIf="selectedUser?.user_id == message.senderuser_id ">
+              <div class="message-box" style="float: left;">
+                {{ message.content }}
+                {{ message.created_at }}
+              </div>
+            </div>
+  
+            <div *ngIf="selectedUser?.user_id == message.receiveruser_id">
+              <div class="message-box" style="float: right;">
+                {{ message.content }}
+                {{ message.created_at }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box">
+  
+          <input id="input" autocomplete="off" [(ngModel)]="value" />
+          <button (click)="send()">Send</button>
+        </div>
+       
+      </div>
     </div>
-    <div class="post-div">
-        <router-outlet></router-outlet>
-    </div>
+  </div> -->

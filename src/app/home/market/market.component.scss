@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    height: 100vmax;
+}
+
+.left {
+    flex: 1;
+    background-color: grey;
+    font-size: 30px;
+    overflow: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.right {
+    flex: 1;
+    background-color: yellow;
+}

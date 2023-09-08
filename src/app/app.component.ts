@@ -10,7 +10,6 @@ export class AppComponent {
 
   constructor(private socket: Socket){
 
-    this.socket.emit('chat-box',{'data':"data"});
     
   }
 

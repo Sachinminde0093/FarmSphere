@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Socket } from 'ngx-socket-io';
 
 @Component({
   selector: 'app-market',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class MarketComponent {
 
+  constructor(private socket: Socket){
+
+    
+  }
+
+  message(){
+    this.socket.emit('chat-box',{'data':"data"}).subscribe((data:any)=>{
+      console.log(data);
+    });
+  }
 }

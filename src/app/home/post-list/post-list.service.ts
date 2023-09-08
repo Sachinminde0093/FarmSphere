@@ -11,15 +11,15 @@ export class PostListService {
 
   constructor(private http:HttpClient) { }
   
-   token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcxMGU3ZjZjLTFkZWItNDI2ZS1iN2ZmLWFmYTlkYzMyZGI0OCIsImlhdCI6MTY5Mzc1MDgyMSwiZXhwIjoxNjk0MTgyODIxfQ.Sd1xknPsQPq0qHzWeoFMIc0-698W5S6ND_4DcI9_3oA";
+   token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliMzI0N2NiLTJlODgtNGViZC1hOTZlLWJlZGI5YTEyYzAzYSIsImlhdCI6MTY5NDAwNzI3MCwiZXhwIjoxNjk0NDM5MjcwfQ.-qwm2Vlcgk-XXx0YCD5hSvANOmEq9RoE_9wjx5KeBjY";
 
   getPosts(page:number, limit:number) : Observable<any>{
 
     return this.http.post('/api/post', {'page': page, limit},{
-      headers:{
-        Authorization: `Bearer ${this.token}`
+      // headers:{
+      //   Authorization: `Bearer ${this.token}`
         
-      }
+      // }
     });
   }
   

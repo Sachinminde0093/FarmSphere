@@ -1,38 +1,36 @@
-
-
-.outer-div{
-    height: 100%;
-    width: 100%;
-    display:flex ;
-    justify-content: center;
-    align-items: center;
+.outer-div {
+    display: flex;
     flex-direction: column;
-    
+    align-items: center;
+    overflow: scroll;
+    padding-top: 2px;
 }
-.main-div{
+
+.main-div {
     width: 600px;
     padding: 10px;
     border-radius: 10px;
-    background-color: aqua;
+    background-color: rgb(127, 128, 128);
     box-shadow: 2px grey;
     margin-bottom: 20px;
 }
 
-.user-div{
+.user-div {
     display: inline-flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 
 
-.user-image{
+.user-image {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    margin-right:10px;
+    margin-right: 10px;
 }
 
-.user-subtitle{
+.user-subtitle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,17 +39,17 @@
     margin-right: 40px;
 }
 
-h2{
+h2 {
     margin: 3px;
 }
 
-.subtitle-img{
+.subtitle-img {
     height: 15px;
     width: 15px;
     border-radius: 50%;
 }
 
-h6{
+h6 {
     margin: 3px;
     padding: 0px;
     font-size: 12px;
@@ -59,76 +57,76 @@ h6{
     margin-right: 5px;
 }
 
-.hamburger{
-    align-items:end;
+.hamburger {
+    float: left;
 }
 
-.title-div{
+.title-div {
     margin-top: 10px;
-     margin-bottom: 0px;
-     padding: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 
-.post-img-div{
+.post-img-div {
     // display:  flex;
     // flex-direction:row;
-    margin:2px;
-    
+    margin: 2px;
+
 }
 
-.for-loop-div{
-    display:  flex;
-    flex-direction:row;
+.for-loop-div {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     overflow: scroll;
-    
+
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-.post-img{
+.post-img {
     margin-top: 10px;
     height: 300px;
-    width:100%;
+    width: 100%;
     border-radius: 10px;
 }
 
-ion-icon{
+ion-icon {
     margin-right: 10px;
     height: 20px;
     width: 20px;
 }
 
-.body-div{
+.body-div {
     font-size: 12px;
 }
 
-.actions{
+.actions {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-size: large;
 }
 
-.actions p:hover{
+.actions p:hover {
     opacity: 0.5;
 }
 
-.comment-sec{
+.comment-sec {
     display: flex;
     align-items: center;
 }
 
-.comment-sec img{
+.comment-sec img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    margin-right:10px;
+    margin-right: 10px;
 }
 
-.comment-input{
+.comment-input {
     width: 70%;
     height: 30px;
     margin-right: 5px;
@@ -140,19 +138,17 @@ ion-icon{
     margin-right: 5px;
 }
 
-.icons{
+.icons {
     display: flex;
 }
 
-.icons p:hover{
+.icons p:hover {
     opacity: 0.5;
 }
 
 
 
-.send {
-
-}
+.send {}
 
 
 
@@ -252,7 +248,7 @@ ion-icon{
 
 // .post {
 //     // align-items: center;
-    
+
 //     // flex-direction: column;
 //     // border: 2px solid black;
 //     // width: 600;
@@ -264,7 +260,7 @@ ion-icon{
 //     display: flex;
 //     flex-direction:row;
 //     align-items: center;
-    
+
 // }
 
 // .user-img-div{
