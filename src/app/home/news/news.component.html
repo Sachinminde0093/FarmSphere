@@ -1,12 +1,12 @@
 <div class="outer">
   <div class="left" >
     <div *ngFor="let i of userList">
-      <div [ngStyle]="{'background-color': i.user_id == selectedUser?.user_id ? 'grey' : null}">
+      <div [ngStyle]="{'background-color': i.user_id == selectedUser?.user_id ? '#2E8A99' : null}">
         <div class="user-div" (click)="selectUser(i)">
           <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
           <div class="username-div">
             <h2 class="username"> {{ i.email }} </h2>
-            <p class="lastmes2sage"> how are you</p>
+            <p class="lastmessage"> how are you</p>
           </div>
         </div>
         <hr class="devider">
@@ -14,10 +14,15 @@
     </div>
   </div>
   <div class="right">
-    <div class="main">
+    <div class="main" *ngIf="selectedUser!=null">
+
       <div class="upper">
-        <div class="email">
-          {{ selectedUser?.email }}
+        <div class="header">
+          <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
+          <div class="email">
+            {{ selectedUser.email }}
+          </div>
+          <p class="camera"><ion-icon name="camera-outline"></ion-icon></p>
         </div>
       </div>
 

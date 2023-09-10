@@ -1,8 +1,8 @@
 import { AfterViewChecked, Component, ElementRef, ViewChild } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
-import { ChatServiceService } from './chat-service.service';
 import User from '../profile/user.model';
 import Message from './message';
+import { ChatService } from 'src/app/services/chat.service';
 
 @Component({
   selector: 'app-news',
@@ -18,7 +18,7 @@ export class NewsComponent implements AfterViewChecked {
   private user!: User;
 
 
-  constructor(private socket: Socket, private chatService: ChatServiceService) {
+  constructor(private socket: Socket, private chatService: ChatService) {
     
     
     this.user = JSON.parse(localStorage.getItem('user')!);

@@ -1,3 +1,35 @@
+
+.loader-div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 .outer-div {
     display: flex;
     flex-direction: column;
@@ -9,16 +41,17 @@
 .main-div {
     width: 600px;
     padding: 10px;
+    border: grey 2px;
     border-radius: 10px;
-    background-color: rgb(127, 128, 128);
-    box-shadow: 2px grey;
+    background-color: white;
+    // box-shadow: 2px grey;
     margin-bottom: 20px;
 }
 
 .user-div {
+    width: 100%;
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 
@@ -32,8 +65,6 @@
 
 .user-subtitle {
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0px;
     padding: 0px;
     margin-right: 40px;
@@ -57,8 +88,13 @@ h6 {
     margin-right: 5px;
 }
 
-.hamburger {
-    float: left;
+// .hamburger {
+    
+//     float: right;
+// }
+
+.user-name-div{
+    width: 100%;
 }
 
 .title-div {
@@ -135,6 +171,7 @@ ion-icon {
 .like-img {
     height: 20px;
     width: 20px;
+    margin-top: 5px;
     margin-right: 5px;
 }
 
@@ -147,10 +184,23 @@ ion-icon {
 }
 
 
+.create-post-button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: orange;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    justify-content: center;
+}
 
-.send {}
-
-
+.add-button{
+    font-size: 50px;
+    color: white;
+}
 
 
 
@@ -243,8 +293,6 @@ ion-icon {
 // top:1rem;
 // right:3rem;
 // }
-
-
 
 // .post {
 //     // align-items: center;

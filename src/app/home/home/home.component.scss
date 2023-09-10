@@ -5,136 +5,37 @@ body{
 
 .main{
   height: 100vh;
-  background-color: aqua;
+  background-color: #84A7A1;
   display: flex;
   flex-direction: column;
 }
 
 .upper{
-  background-color: aquamarine;
-  height: 50px;
+  background-color:#0E2954;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lower{
-  background-color: rgb(241, 125, 36);
+  // background-color: rgb(241, 125, 36);
   overflow: scroll;
   flex: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// .left{
-//   background-color:cadetblue;
-// }
-
-// .right{
-//   background-color: blueviolet;
-// }
-
-// .type{
-//  position: relative;
-//   background-color: black;
-//   height: 3.5rem;
-//   z-index: 999;
-//   width: 60%;
-//   left: 14rem;
-//   top:30rem;
-//   /* top:10rem;
-//   right:10rem; */
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// body {
-//   margin: -10px;
-//   padding: -10px;
-// }
-
-// .nav{
-//   background-color: #333;
-//   display: flex;
-// }
-
-// ul {
-//   list-style-type: none;
-//   margin: 0px;
-//   padding: 0px;
-//   overflow: hidden;
-// }
-
-// li {
-//   float: left;
-//   font-size: 20px;
-// }
-
-// li a {
-//   display: block;
-//   color: white;
-//   text-align: center;
-//   padding: 14px 16px;
-//   text-decoration: none;
-// }
-
-// li a:hover:not(.active) {
-//   background-color: #111;
-// }
-
-// .active {
-//   background-color: #04AA6D;
-// }
-
-
-
-// .nav{
-//   background-color: #333;
-//   height: 50px;
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   z-index: 500;
-//   margin-bottom: 51px;
-// }
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  // overflow: hidden;
-  // position: fixed;
-  // top: 0;
+  align-items: center;
   width: 100%;
 }
 
 li {
   float: left;
   font-size: 20px;
+  // margin-top: 10px;
 }
 
 li a {
@@ -146,36 +47,29 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  // background-color: #111;
+  font-size: 24px;
 }
+
+// li a:active{
+//   background-color: brown;
+//   font-size: 24px;
+// }
 
 .profile-right {
   float:right
 }
-.post-div{
+
+.user-image {
   margin: 0;
   padding: 0;
-  padding:20px;
-  margin-top:42px
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 
 // .active {
-//   background-color: #04AA6D;
+//   font-size: 24px;
 // }
 
-// .main-container{
-//   height:67.6rem;
-//   display: grid;
-//   grid-template-columns: 1fr 3fr;
-// }
 
-// .user{
-//   top:40px;
-//   bottom: 0;
-//   background-color: aqua;
-  
-// }
-
-// .chat{
-//   background-color: aquamarine;
-// }

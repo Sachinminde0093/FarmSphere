@@ -1,9 +1,17 @@
+ <div class="loader-div" *ngIf="post_list.length == 0">
+            <h2>We're preparing your content, just a moment...
+            </h2>
+            <div class="loader"></div>
+    </div>
+
 <div class="outer-div">
+   
     <div *ngFor="let post of post_list let i = index" class="list-div">
         <div class="main-div" >
             <div class="user-div">
+                
                 <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
-                <div>
+                <div class="user-name-div">
                     <h2>
                         My Farmer
                     </h2>
@@ -42,9 +50,7 @@
                 </div>
                 </div>
                
-                
             </ng-container>
-            
 
             <div class="count-div">
 
@@ -76,6 +82,9 @@
 
         </div>
 
+        <div class="create-post-button" (click)="createPost()">
+            <div class="add-button"> 😂 </div>
+        </div>
     </div>
 </div>
 

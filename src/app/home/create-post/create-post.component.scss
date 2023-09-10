@@ -5,15 +5,11 @@
     
 }
 
-html{
-    font-size: 62.5%;
-    /* 1rem=10px */
-    /* by default 1rem=16px */
-}
-
 body{
     display: flex;
     justify-content: center;
+    height:100%;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -125,7 +121,14 @@ body{
 
 .image-preview{
     display: flex;
-    
+    margin-top: 10px;
+}
+
+.img-fluid{
+    margin: 0px 10px;
+    margin-bottom: 5px;
+    height: 150px;
+    width: 150px;
 }
 
 .photos-add{
@@ -137,7 +140,6 @@ body{
         border-style: solid;
         padding: 0.4rem;
         margin-top: 10rem;
-       
        }
 
 .img-icon-drop{

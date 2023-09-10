@@ -12,6 +12,7 @@ import { LocalStorageToken } from './tokens/localstorage.token';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { RequestInterceptor } from './request.interceptor';
+import { OnboardComponent } from './onboard/onboard.component';
 
 
 const token = localStorage.getItem('accessToken');
@@ -22,6 +23,7 @@ const config: SocketIoConfig = { url: 'http://localhost:8080', options: { auth: 
   declarations: [
     AppComponent,
     LoginComponent,
+    OnboardComponent,
   ],
   imports: [
     BrowserModule,

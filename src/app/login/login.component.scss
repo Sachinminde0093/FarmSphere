@@ -5,6 +5,7 @@
     height: 100vh;
     width: 100%;
     align-items: center;
+    background-color: #84A7A1;
     display: flex;
     justify-content: center;
 }
@@ -22,14 +23,15 @@
     padding: 5px;
     padding-top: 20px;
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color: #1F6E8C;
+
 }
 
 .title {
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    color: darkmagenta;
+    color: white;
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
@@ -39,6 +41,9 @@
 
 input {
     margin: 20px;
+    background-color: #84A7A1;
+    border: none;
+    // color: white;
 }
 
 .input-email {
@@ -62,9 +67,26 @@ input {
 }
 
 .login {
-    padding: 5px;
+    padding: 10px;
+    background-color: #2E8A99;
+    color: white;
     padding-left: 30px;
     padding-right: 30px;
     font-size: 16px;
     border-radius: 8px;
+}
+.register{
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    opacity: .5;
+    cursor: pointer;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.register:hover{
+    opacity: 1;
 }

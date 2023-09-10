@@ -10,37 +10,13 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  login(email: string, password: string, name:string): Observable<LoginResponse> {
+  login(email: string, password: string, name: string, path: string): Observable<LoginResponse> {
     let data = {
       email,
-     password,
+      password,
     }
-    // let user =  this.http.post<User>('/api/user/login', data);
-    // this.http.get<User>('/api/user');
 
-     return  this.http.post<LoginResponse>('/api/user/login', data);
-
+    return this.http.post<LoginResponse>(`/api/user/${path}`, data);
   }
-
-  // loginTest(email: string, password: string, name:string): User {
-
-  //   try {
-  //     console.log('login');
-  //     let data = {
-  //       'email': email,
-  //       password: password
-  //     }
-
-  //     let user: User = {
-  //       email: 'sachin@gmail.com',
-  //       name: "string",
-  //       userId: '21u153',
-  //       accessToken:''
-  //     }
-  //     return user;
-  //   } catch (error) {
-  //     throw error;
-  //   }
-  // }
 
 }

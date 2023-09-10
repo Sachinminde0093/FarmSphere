@@ -2,15 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
 import { Observable } from 'rxjs';
-import User from '../profile/user.model';
-import Message from './message';
+import User from '../home/profile/user.model';
+import Message from '../home/news/message';
 
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class ChatServiceService {
+export class ChatService {
 
   constructor(private socket: Socket, private http: HttpClient) { }
 

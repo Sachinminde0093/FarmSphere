@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import Post from './models/post.model';
-import { User } from 'src/app/models/user.model';
+import Post from '../home/post-list/models/post.model';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +20,12 @@ export class PostListService {
       // }
     });
   }
+
+  createPost(title:string, body:string, type:string) : Observable<Post>{
+
+    return this.http.post<Post>('/api/post/create', {title: title, body:body, type:type});
+  }
   
 }
+
+

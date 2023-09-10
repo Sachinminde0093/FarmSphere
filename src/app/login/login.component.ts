@@ -19,15 +19,20 @@ export class LoginComponent {
     private socket:Socket
     ) { }
 
+  isRegister = true;
   name: string = '';
   email: string = '';
   password: string = '';
+
+  toggle(){
+    this.isRegister = !this.isRegister; 
+  }
 
   async login() {
 
    try {
     if (this.password.length > 5) {
-      this.loginService.login(this.email, this.password, this.name).subscribe(
+      this.loginService.login(this.email, this.password, this.name, this.isRegister?'register': 'login').subscribe(
         (user) => {
           console.log(user, 'login data');
           console.log('from interceptor');
@@ -54,16 +59,10 @@ export class LoginComponent {
     this.socket.connect();
   }
 
-  // ...
-
   // After login, call this function to reconnect with the new token
   handleSuccessfulLogin(token: string) {
     this.reconnectWithToken(token);
   }
 
-  // loginTest(){
-  //   let user  = this.loginService.loginTest(this.email, this.password, this.name);
-  //   this.localstorage.setItem('user',JSON.stringify(user));
-  //   this.router.navigate(['/home']);
-  // }
+ 
 }

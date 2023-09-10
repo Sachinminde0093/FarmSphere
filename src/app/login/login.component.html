@@ -12,8 +12,11 @@
             <div><input type="password" [(ngModel)]="password" required placeholder="Password" class="input-password">
             </div>
 
+            <div class="login-div"><button (click)="login()" class="login"> {{ isRegister? 'Register': 'Login' }} </button></div>
 
-            <div class="login-div"><button (click)="login()" class="login"> Login </button></div>
+            <div class="register" (click)="toggle()">
+                {{  isRegister? 'Login': 'Register' }}
+            </div>
         </div>
     </div>
 </div>

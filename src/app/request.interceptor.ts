@@ -12,12 +12,27 @@ import { LocalStorageToken } from './tokens/localstorage.token';
 @Injectable()
 export class RequestInterceptor implements HttpInterceptor {
 
-  constructor() {}
-  
+  constructor() { }
+
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    const accessToken = localStorage.getItem('accessToken');
-    console.log(accessToken);
-    const newRequest = request.clone({headers: new HttpHeaders({Authorization: `Bearer ${accessToken}`})});
-    return next.handle(newRequest);
+
+    const skipTokenHeader = request.headers.get('skipToken');
+    const isSkipToken = skipTokenHeader === 'true';
+
+    if (isSkipToken) {
+      request = request.clone({
+        headers: request.headers.delete('skipToken'),
+      });
+    } else {
+      const accessToken = localStorage.getItem('accessToken');
+      request = request.clone({
+        setHeaders: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+    }
+
+    // Continue with the modified request
+    return next.handle(request);
   }
 }

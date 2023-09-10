@@ -1,15 +1,9 @@
 export default interface Post {
-    // profile: string,
-    // name : string,
-    // email: string,
-    // password: string,
-    // address: string ,
-    // birthdate: string,
-    postId: string,
-    user: {
-        userId: string,
-        userImage: string,
-        userName: string,
+    post_id: string,
+    user?: {
+        user_id: string,
+        profile_photo: string,
+        username: string,
     }
     type: string,
     title: string,

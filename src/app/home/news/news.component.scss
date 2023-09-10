@@ -1,5 +1,5 @@
 .outer {
-  background-color: red;
+  // background-color: red;
   height: 100%;
   display: grid;
   grid-template-columns: 1.5fr 3fr;
@@ -8,12 +8,12 @@
 .left {
   // padding-top: 5px;
   overflow: scroll;
-  background-color: cadetblue;
+  background-color: #1F6E8C;
 }
 
 .right {
   overflow: scroll;
-  background-color: blueviolet;
+  // background-color: ;
 }
 
 .main {
@@ -23,23 +23,22 @@
 }
 
 .upper {
-  background-color: rgb(88, 71, 238);
-  height: 50px;
+  background-color: #0B666A;
+  height: 72px;
 }
 
 .middle {
-  background-color: rgb(241, 125, 36);
+  // background-color: rgb(241, 125, 36);
   overflow: scroll;
   padding-bottom: 60px;
   flex: 1;
 }
 
-.lower{
-  background-color: rgb(43, 25, 196);
+.lower {
   height: 60px;
   flex: 1;
   position: fixed;
-  bottom:0;
+  bottom: 0;
   width: 100%;
   // width: 100%;
 }
@@ -49,7 +48,6 @@
 
 .user {
   height: 100%;
-  background-color: blue;
 }
 
 .chat {
@@ -64,12 +62,13 @@
   width: 100%;
   align-items: center;
   display: flex;
-  padding-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   flex-direction: row;
 }
 
 .user-div:hover {
-  background-color: gray;
+  background-color: #2E8A99;
 }
 
 .user-image {
@@ -104,24 +103,32 @@
   // margin-bottom: 5px;
   margin-right: 5px;
   margin-left: 77px;
-  color: gray;
+  // background-color: grey;
+  // color: rgb(5, 0, 0);
+}
+
+hr {
+  height: 2px;
+  border-width: 0;
+  color: #84A7A1;
+  background-color: #84A7A1
 }
 
 
 
 
 .message-box {
-  max-width:50%;
+  max-width: 50%;
   padding: 5px;
   font-size: 18px;
   margin: 5px;
-  // overflow:auto;
+
   border-radius: 10px;
-  background-color: gray;
+  background-color: #2E8A99;
 }
 
 
-p{
+p {
   margin: 0;
   padding: 0;
 }
@@ -148,38 +155,65 @@ p{
   width: 100%;
 }
 
-.email {
+.header {
   font-size: 24px;
+  height: 72px;
+  width: 100%;
   font-weight: bold;
-  align-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   overflow-x: hidden;
 }
 
 
 
-#input{
+#input {
   width: 45%;
   padding: 10px;
   margin-right: 20px;
   border-radius: 10px;
+  border: none;
+  background-color: #84A7A1;
 
 }
 
-.send-button{
+.send-button {
   height: 40px;
-  padding-left:20px ;
-  padding-right:20px ;
+  padding:  0px 30px;
   border-radius: 15px;
+  border: none;
+  background-color: #2E8A99;
 }
 
+.email {
+  margin-right: 20px;
+}
+
+.camera {
+  margin-top: 3px;
+}
+
+ion-icon {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+.icons {
+  display: flex;
+}
+
+.icons p:hover {
+  opacity: 0.5;
+}
 
 
 .chat-box {
-    // width: 100%;
-    padding-left: 5%;
-    
-    height: 60px;
-    background-color: aqua;
-    display: flex;
-    align-items: center;
+  // width: 100%;
+  padding-left: 5%;
+  height: 60px;
+  background-color: #0B666A;
+  display: flex;
+  align-items: center;
 }
