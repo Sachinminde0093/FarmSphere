@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FileService } from 'src/app/services/file.service';
 import { PostListService } from 'src/app/services/post.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class CreatePostComponent {
 
   body: string = '';
 
-  constructor(private postService:PostListService , private http: HttpClient, private fileService: FileService) { }
+  constructor(private postService:PostListService , private http: HttpClient, private fileService: FileService, private router:Router) { }
 
   changeType(type: string) {
     this.postType = type;
@@ -67,8 +68,9 @@ export class CreatePostComponent {
       if(this.imageList.length > 0){
 
          this.fileService.generatUrls(this.selectedfiles!).subscribe(
-          (data)=>{
-             this.fileService.uploadFile(data, this.selectedfiles!,post.post_id);
+          async (data)=>{
+            await this.fileService.uploadFile(data, this.selectedfiles!,post.post_id, 'post');
+            this.router.navigate(['/home']);
           }
         );
       }

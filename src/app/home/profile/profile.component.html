@@ -2,7 +2,7 @@
     <div class="profile">
         <div class="cover-photo-div">
             <!-- <img src="../../../assets/images/avatar.jpg" alt="" class="cover-photo"> -->
-            <img src="../../../assets/images/avatar.jpg" alt="" class="profile-photo">
+            <img [src]="user?.profile_photo" alt="" class="profile-photo">
         </div>
 
         <div class="user-name">
@@ -10,9 +10,5 @@
                {{ user?.username }}
             </h2>
         </div>
-
-        
-
-
     </div>
 </div>

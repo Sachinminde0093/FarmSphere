@@ -1,1 +1,85 @@
-<p>onboard works!</p>
+<div class="outer-container">
+    <!-- <div class="user-form">
+    <h2>User Information</h2>
+    <form (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" [(ngModel)]="userData.username" required>
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio" [(ngModel)]="userData.bio"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="userData.first_name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="userData.last_name" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+ -->
+
+    <div class="profile-form">
+        <h2>User Profile</h2>
+        <form (ngSubmit)="submitForm()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" [(ngModel)]="userData.username" required>
+            </div>
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" [(ngModel)]="userData.bio"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" [(ngModel)]="userData.first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" [(ngModel)]="userData.last_name" required>
+            </div>
+            <div class="form-group">
+                <div class="photos-add">
+                    <label for="profilePhoto">
+                        <div class="image">
+                            <p class="img-icon-drop"><ion-icon name="cloud-upload-outline"></ion-icon></p>
+                            <p class="img-txt">Add photo </p>
+                            <p class="drag">or drag and drop</p>
+                        </div>
+                    </label>
+                    <input type="file" id="profilePhoto" name="profilePhoto" (change)="onFileSelected($event)"
+                        accept="image/*" style="display: none;">
+                </div>
+            </div>
+            <!-- <div>
+         <form method="post" enctype="multipart/form-data">
+            <div>
+                <input type="file" id="image_uploads" name="image_uploads" accept="image/*"
+                (change)="onFileSelected($event)" style="display: none;" />
+
+                <label for="image_uploads" style="cursor: pointer;">
+                    <div class="photos-add">
+
+                        <div class="image">
+                            <p class="img-icon-drop"><ion-icon name="cloud-upload-outline"></ion-icon></p>
+                            <p class="img-txt">Add photos/videos </p>
+                            <p class="drag">or drag and drop</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            </form> -->
+
+            <!-- </div> -->
+            <div class="form-group">
+                <img *ngIf="selectedFile" [src]="selectedFileUrl" alt="Selected Profile Photo">
+            </div>
+            <button type="submit">Save Profile</button>
+        </form>
+    </div>
+</div>

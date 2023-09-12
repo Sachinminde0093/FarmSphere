@@ -1,11 +1,5 @@
-export interface User {
-   
-    user_id:string,
-    email:string,
-    name:string,
-    proImage?:string,
-   
-}
+import User from "../home/profile/user.model";
+
 
 export interface LoginResponse{
     user:User,

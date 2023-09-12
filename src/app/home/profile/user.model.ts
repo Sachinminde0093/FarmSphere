@@ -5,6 +5,6 @@ export default interface User {
     bio:string,
     first_name:string,
     last_name:string,
-    profile:string,
+    profile_photo:string,
 
 }

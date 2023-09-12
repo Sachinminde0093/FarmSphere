@@ -10,16 +10,16 @@
         <div class="main-div" >
             <div class="user-div">
                 
-                <img src="../../../assets/images/avatar.jpg" alt="user" class="user-image">
+                <img [src]="post.user.profile_photo " alt="user" class="user-image">
                 <div class="user-name-div">
                     <h2>
-                        My Farmer
+                       {{ post.user.username }}
                     </h2>
                     <div class="user-subtitle">
                         <h6>
-                            Farmer.
+                           {{ post.user.bio }}
                         </h6>
-                        <h6>1.d.</h6>
+                        <h6> {{ getElapsedTime(post.created_at) }} </h6>
                         <img src="../../../assets/images/avatar.jpg" alt="" class="subtitle-img">
                     </div>
                 </div>
@@ -59,10 +59,10 @@
             <div class="actions">
 
                 <p class="like">
-                    <img src="../../../assets/png/like.png" alt="" class="like-img">Like
+                    <img src="../../../assets/png/like.png" alt="" class="like-img">
                 </p>
-                <p class="comment"><ion-icon name="chatbox-outline"></ion-icon>Comment</p>
-                <p class="share"><ion-icon name="arrow-redo-outline"></ion-icon>Share</p>
+                <p class="comment"><ion-icon name="chatbox-outline"></ion-icon></p>
+                <p class="share"><ion-icon name="arrow-redo-outline"></ion-icon></p>
 
             </div>
 

@@ -34,12 +34,16 @@ export class LoginComponent {
     if (this.password.length > 5) {
       this.loginService.login(this.email, this.password, this.name, this.isRegister?'register': 'login').subscribe(
         (user) => {
-          console.log(user, 'login data');
-          console.log('from interceptor');
+          
           this.localstorage.setItem('accessToken',user.accessToken);
           this.localstorage.setItem('user',JSON.stringify(user.user));
           this.handleSuccessfulLogin(user.accessToken);
-          this.router.navigate(['/home']);
+          if(user.user.username){
+          this.router.navigate(['/']);
+
+          }else{
+          this.router.navigate(['/onboard']);
+          }
         }
       );
     }

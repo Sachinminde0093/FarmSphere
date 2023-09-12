@@ -1,0 +1,156 @@
+.outer-container{
+    // height: 100vh;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+// .user-form {
+//     width: 440px;
+//     min-height: 500px;
+//     font-size: 16px;
+//     margin: 0 auto;
+//     padding: 20px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     background-color: #f9f9f9;
+//   }
+  
+//   .user-form h2 {
+//     text-align: center;
+//   }
+  
+//   .form-group {
+//     margin-bottom: 15px;
+//     display: flex;
+//     flex-direction: column;
+
+//   }
+  
+//   label {
+//     font-weight: bold;
+//   }
+  
+//   input[type="text"],
+
+//   textarea {
+//     width: 400px;
+//     max-width: 400px;
+//     min-width: 400px;
+//     padding: 10px;
+//     border: 1px solid #ccc;
+//     border-radius: 3px;
+//   }
+
+//   textarea{
+//     height: 60px;
+//   }
+  
+//   button {
+//     display: block;
+//     width: 400px;
+//     padding: 10px;
+//     background-color: #007bff;
+//     color: #fff;
+//     border: none;
+//     border-radius: 3px;
+//     cursor: pointer;
+//   }
+  
+//   button:hover {
+//     background-color: #0056b3;
+//   }
+  
+
+
+.profile-form {
+    width: 440px;
+    min-height: 500px;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .profile-form h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+
+  textarea {
+    width: 420px;
+        max-width: 420px;
+        min-width: 420px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+  }
+  
+  input[type="file"] {
+    width: 420px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  button {
+    display: block;
+    width:  100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+  }
+
+ 
+   .image{
+    height: 70px;
+    background-color: #D3D3D3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    margin: 1px;
+    padding: 0;
+}
+
+.photos-add{
+    
+    height: 70px;
+    border-color: #D3D3D3;
+    border-radius: 3px;
+    border: 1px;
+    border-style: solid;
+    padding: 0.3rem;
+   }

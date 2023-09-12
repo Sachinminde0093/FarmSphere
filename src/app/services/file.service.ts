@@ -31,8 +31,8 @@ export class FileService {
 
   }
 
-  async uploadFile(data: FileUploadResponse[], files: FileList, post_id: string) {
-
+  async uploadFile(data: FileUploadResponse[], files: FileList, id: string, type: string) {
+    console.log(files);
     for (let file of data) {
 
       const formData = new FormData;
@@ -56,16 +56,31 @@ export class FileService {
 
       this.http.request(req.method, req.url, req.options).subscribe(
         (data) => {
-          const body = {
-            "post_id": post_id,
-            "file": {
-              "key": file.key,
-              "extension": file.extension,
-              "order": file.order,
-              "type": "image"
-            }
+
+          let body: Object;
+
+          if (type === 'user') {
+            body = {
+              "user_id": id,
+              "file": {
+                "key": file.key,
+                "extension": file.extension,
+                "order": file.order,
+                "type": "image"
+              }
+            };
+          } else {
+            body = {
+              "post_id": id,
+              "file": {
+                "key": file.key,
+                "extension": file.extension,
+                "order": file.order,
+                "type": "image"
+              }
+            };
           }
-          this.http.request('POST', '/api/file/save', { body: body }).subscribe(
+          this.http.request('POST', `/api/file/save/${type}`, { body: body }).subscribe(
             (save) => {
               console.log(save);
             }
